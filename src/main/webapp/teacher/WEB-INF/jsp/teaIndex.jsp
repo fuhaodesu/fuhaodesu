@@ -81,12 +81,6 @@
     <form action="/teacher/editLesson" method="get">
         <input type="submit" value="edit lesson" class="button">
     </form>
-<<<<<<< HEAD
-    <form action="/teacher/fileUpload" method="get">
-        <input type="submit" value="file upload" class="button">
-    </form>
-=======
->>>>>>> a32a4849443e1882fdb2d174382afcf7d1c454a2
 </nav>
 <footer>
     CopyRight 2021 JiRan
