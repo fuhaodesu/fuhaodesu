@@ -9,99 +9,9 @@
 <html>
 <head>
     <title>result</title>
-    <link rel="stylesheet" type="text/css" href="index.css"/>
-    <style>
-        header
-        {
-            background-color:#6699CC;
-            color:white;
-            text-align:center;
-            padding:5px;
-        }
-        .button1 {
-            margin-left: 60px;
-            margin-top: 10px;
-            width: 100px;
-            background-color: #66CCFF; /* Green */
-            border: none;
-            color: #ffffff;
-            padding: 15px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            float: left;
-            border-radius: 5px;
-        }
-        .button1:hover {
-            background-color:#6699CC; /* Green */
-        }        .button {
-                     /*margin-top: 10px;*/
-                     width: 100%;
-                     background-color: #66CCFF;
-                     border: none;
-                     color: #ffffff;
-                     padding: 15px 32px;
-                     text-align: center;
-                     text-decoration: none;
-                     display: inline-block;
-                     font-size: 16px;
-                     float: left;
-                 }
-        .button:hover {
-            background-color:#6699CC;
-        }
-        .buttonHover{
-            background-color:#6699CC;
-            /*margin-top: 10px;*/
-            width: 100%;
-            border: none;
-            color: #ffffff;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            float: left;
-        }
-        .text1{
-            color: #336699;
-        }
-        .input1{
-
-            -moz-appearance:textfield;
-            border: 1px solid #ccc;
-            font-size: 8px;
-            margin-top: 10px;
-            padding: 10px 25px;
-            border-radius: 2px;
-
-            height: 30px;
-            width: 100px;
-            text-align: center;
-
-        }
-        section {
-            width:500px;
-            float:left;
-            padding:10px;
-            margin:0px auto;
-            align-content: center;
-        }
-
-        .shortselect{
-            background:#fafdfe;
-            height:28px;
-            width:180px;
-            line-height:28px;
-            border:1px solid #9bc0dd;
-            -moz-border-radius:2px;
-            -webkit-border-radius:2px;
-            border-radius:2px;
-        }
-    </style>
 </head>
 <body>
+<<<<<<< HEAD
 <header>
     <h1>结果</h1>
 </header>
@@ -146,5 +56,17 @@
 
 
 
+=======
+<h2>code:${code}</h2>
+<h2>${msg}${id}</h2>
+
+<form action="index" method="get">
+    <input type="submit" value="index">
+</form>
+<form action="editLesson" method="get">
+    <input type="hidden" value="${id}" name="id">
+    <input type="submit" value="add place and time for this lesson">
+</form>
+>>>>>>> a32a4849443e1882fdb2d174382afcf7d1c454a2
 </body>
 </html>
