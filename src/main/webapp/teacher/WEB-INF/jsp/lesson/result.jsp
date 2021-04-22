@@ -134,7 +134,7 @@
         <input type="submit" value="index" class="button1">
     </form>
     <form action="editLesson" method="get">
-        <input type="hidden" value="${id}" name="id">
+        <input type="hidden" value="${id}" name="id" >
         <input type="submit" value="edit lesson" class="button1">
     </form>
 

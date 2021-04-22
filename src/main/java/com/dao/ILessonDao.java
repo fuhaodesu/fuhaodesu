@@ -12,7 +12,6 @@ public interface ILessonDao {
     public Lesson queryLessonById(Integer id);
     public Integer addLessonInfo(LessonInfo lessonInfo);
     public List<Lesson> listLesson();
-    public List<LessonInfo> queryLessonTable();
-    public List<Lesson> queryForAllLessons();
-    public Integer delLesson(Integer id);
+
+
 }

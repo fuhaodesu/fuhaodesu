@@ -102,7 +102,7 @@
     </form>
 
     <form action="/teacher/listLesson" method="get">
-        <input type="submit" value="list lessons" class="buttonHover"/>
+        <input type="submit" value="list students" class="buttonHover"/>
     </form>
     <form action="/teacher/editLesson" method="get">
         <input type="submit" value="edit lesson" class="button"/>
@@ -112,7 +112,7 @@
     </form>
 </nav>
 <section>
-<%--Ajax --%>
+
 
 
 </section>

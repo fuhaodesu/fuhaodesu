@@ -158,8 +158,8 @@
         <p class="text1">添加上课时间：</p>
         第<input type="number" name="startWeek" value="" class="input1">周到第<input type="number" name="endWeek" value="" class="input1">周<br>
         星期<input type="number" name="day" class="input1"><br>
-        第<input type="number" name="startNum" class="input1">节到第<input type="number" name="endNum" class="input1">节<br>
-        <input type="hidden" value="${id}" name="id">
+        第<input type="number" name="startNum" class="input1">节到第<input type="number" name="startNum" class="input1">节<br>
+        <%--<input type="hidden" value="${id}" name="id">--%>
         <input type="submit" value="Submit" class="button1">
     </form>
 

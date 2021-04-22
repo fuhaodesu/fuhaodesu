@@ -75,16 +75,14 @@
         <input type="submit" value="create lesson" class="button">
     </form>
 
-    <form action="/teacher/listLesson" method="get">
-        <input type="submit" value="list lessons" class="button">
+    <form action="/teacher/list" method="get">
+        <input type="submit" value="list students" class="button">
     </form>
     <form action="/teacher/editLesson" method="get">
         <input type="submit" value="edit lesson" class="button">
     </form>
     <form action="/teacher/fileUpload" method="get">
         <input type="submit" value="file upload" class="button">
-    </form>
-
     </form>
 </nav>
 <footer>
