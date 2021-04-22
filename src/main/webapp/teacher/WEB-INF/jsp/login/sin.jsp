@@ -17,7 +17,7 @@
 
             background-color: #99CCCC;
             border-radius: 20px;
-            width: fit-content;
+            width: 300px;
 
             padding: 80px 20px;
             margin:0px auto;
@@ -25,20 +25,20 @@
         .text1{
             color: #336699;
         }
-        input{
+        .input1{
             border: 1px solid #ccc;
             font-size: 16px;
             margin-top: 10px;
             padding: 10px 25px;
             border-radius: 10px;
         }
-        input:focus{
-            　　　　border-color: #ff962d;
-            　　　　outline: 0;
-            　　　　-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 150, 43, 0.6);
-            　　　　box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255,150,43,.6);
+        .input2{
+            margin-top: 10px;
+            background-color: #99CCCC;
+            border: 0px;
+            border-bottom:1px solid #000000;
+            padding: 1px;
         }
-
     </style>
 
 </head>
@@ -51,9 +51,12 @@
 
         <form action="sin" method="post">
 
-            <div class="box2"><input type="text" name="user_name" placeholder="用户名" ></div>
-            <div class="box2"><input type="text" name="password" placeholder="密码" ></div>
-            <input type="submit" value="Submit">
+            <input type="text" name="user_name" placeholder="用户名" class="input1">
+            <input type="password" name="user_pwd" placeholder="密码" class="input1">
+            <input type="submit" value="登录" class="input1">
+        </form>
+        <form action="sup" method="get" >
+            <input type="submit" value="注册" class="input2">
         </form>
 
     </div>

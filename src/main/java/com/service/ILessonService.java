@@ -10,4 +10,7 @@ public interface ILessonService {
     public LessonResultModel createLesson(Lesson lesson);
     public void editLesson(LessonInfo lessonInfo);
     public List<Lesson> listLesson();
+    public List<LessonInfo> queryLessonTable();
+    public List<Lesson> queryForAllLessons();
+    public Integer delLesson(Integer id);
 }

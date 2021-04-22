@@ -22,6 +22,8 @@
 
 <!--    配置拦截器-->
 <!--     多个拦截器，preHandler先配置的先执行-->
+
+
 <!--    <mvc:interceptors>-->
 <!--        <mvc:interceptor>-->
 <!--            <mvc:mapping path="/**/"/>-->
@@ -30,14 +32,23 @@
 <!--        </mvc:interceptor>-->
 <!--    </mvc:interceptors>-->
 <!--    登录拦截-->
+
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/**/"/>
+            <mvc:mapping path="/teacher/**/"/>
             <mvc:exclude-mapping path="/teacher/index"/>
             <mvc:exclude-mapping path="/teacher/sin"/>
             <mvc:exclude-mapping path="/teacher/sup"/>
             <bean class="com.interceptor.LoginInterceptor"></bean>
         </mvc:interceptor>
+
+<!--        <mvc:interceptor>-->
+<!--            <mvc:mapping path="/student/**/"/>-->
+<!--            <mvc:exclude-mapping path="/student/index"/>-->
+<!--            <mvc:exclude-mapping path="/student/sin"/>-->
+<!--            <mvc:exclude-mapping path="/student/sup"/>-->
+<!--            <bean class="com.interceptor.StudentLoginInterceptor"></bean>-->
+<!--        </mvc:interceptor>-->
     </mvc:interceptors>
 
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
@@ -55,7 +66,7 @@
     <bean id="defaultViewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-        <property name="contentType" value="text/html"/>
+<!--        <property name="contentType" value="text/html"/>-->
         <property name="prefix" value="WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>

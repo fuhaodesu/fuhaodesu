@@ -21,7 +21,6 @@ public class StudentDaoImpl implements IStudentDao {
     @Resource
     private JdbcTemplate jdbcTemplate;
 
-
     @Override
     public Student queryStudentByName(String userName) {
         Student stu=new Student();
@@ -42,9 +41,6 @@ public class StudentDaoImpl implements IStudentDao {
         },keyHolder);
         return keyHolder.getKey().intValue();
     }
-
-
-
 
 
     public static class StuRowMapper implements RowMapper<Student> {
