@@ -62,7 +62,6 @@ public class LessonController {
         mv.addObject("tea2",lesson.getTeacherName2());
         mv.addObject("tea3",lesson.getTeacherName3());
         mv.addObject("tea4",lesson.getTeacherName4());
-        mv.addObject("id",lesson.getId());
         return mv;
     }
     @RequestMapping(value ="teacher/editLesson",method = RequestMethod.POST)
@@ -71,11 +70,8 @@ public class LessonController {
         mv.setViewName("lesson/result");
 
         LessonInfo lessonInfo=new LessonInfo();
-
-
-        System.out.println(request.getParameter("id"));
-
-
+        System.out.println(request.getParameter("building"));
+        System.out.println(Integer.parseInt(request.getParameter("room")));
         lessonInfo.setBuilding(request.getParameter("building"));
         lessonInfo.setRoom(Integer.parseInt(request.getParameter("room")));
         lessonInfo.setStartWeek(Integer.parseInt(request.getParameter("startWeek")));
@@ -83,7 +79,7 @@ public class LessonController {
         lessonInfo.setDay(Integer.parseInt(request.getParameter("day")));
         lessonInfo.setStartNum(Integer.parseInt(request.getParameter("startNum")));
         lessonInfo.setEndNum(Integer.parseInt(request.getParameter("endNum")));
-        lessonInfo.setId(Integer.parseInt(request.getParameter("id")));
+//        lessonInfo.setId(Integer.parseInt(request.getParameter("id")));
 
         System.out.println(lessonInfo);
         lessonService.editLesson(lessonInfo);
@@ -94,7 +90,7 @@ public class LessonController {
     @RequestMapping(value = "teacher/listLesson")
     public ModelAndView listLesson(){
         ModelAndView mv=new ModelAndView();
-        mv.setViewName("lesson/listLesson");
+        mv.setViewName("lesson/createLesson");
         return mv;
     }
     @RequestMapping(value = "teacher/listLessons")
@@ -102,4 +98,6 @@ public class LessonController {
     public List<Lesson> listLessons(){
         return lessonService.listLesson();
      }
+
+
 }

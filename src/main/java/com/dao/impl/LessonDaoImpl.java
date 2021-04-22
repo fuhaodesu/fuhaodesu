@@ -70,22 +70,6 @@ public class LessonDaoImpl implements ILessonDao {
                 new LessonRowMapper());
     }
 
-    @Override
-    public List<LessonInfo> queryLessonTable() {
-        return null;
-    }
-
-    @Override
-    public List<Lesson> queryForAllLessons() {
-        return jdbcTemplate.query("select id,lessonName,teacherName1,teacherName2,teacherName3,teacherName4 from lessons",
-                new LessonRowMapper());
-    }
-
-    @Override
-    public Integer delLesson(Integer id) {
-        return jdbcTemplate.update("delete from lessons where id=?",id);
-    }
-
     public static class LessonRowMapper implements RowMapper<Lesson> {
         @Override
         public Lesson mapRow(ResultSet resultSet, int i) throws SQLException {
