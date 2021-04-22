@@ -1,10 +1,11 @@
 package com.model;
 
+import com.po.User;
 import lombok.Data;
 
 //用户模型数据
 @Data
-public class UserModel {
+public class UserModel extends User {
     private  Integer id;
     private String userName;
     private String userPwd;

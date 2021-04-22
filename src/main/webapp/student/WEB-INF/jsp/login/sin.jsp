@@ -46,7 +46,7 @@
 
 
     <div class="box1" align="center">
-        <h1 class="text1">教师登录</h1>
+        <h1 class="text1">学生登录</h1>
 
 
         <form action="sin" method="post">

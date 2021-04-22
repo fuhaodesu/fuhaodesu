@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>index</title>
-<%--    <link rel="stylesheet" type="text/css" href="index.css"/>--%>
+
     <style>
         header {
             background-color: #6699CC;
@@ -37,8 +37,7 @@
             text-align:center;
             padding:5px;
         }
-        .button
-        {
+        .button {
             /*margin-top: 10px;*/
             width: 100%;
             background-color: #66CCFF; /* Green */
@@ -61,29 +60,16 @@
 </head>
 <body>
 <header>
-    <h1>index for teacher</h1>
+    <h1>index for student</h1>
 </header>
 <nav>
-    <form action="/teacher/sin" method="get">
+    <form action="/student/sin" method="get">
         <input type="submit" value="sign in" class="button">
     </form>
-    <form action="/teacher/sup" method="get">
+    <form action="/student/sup" method="get">
         <input type="submit" value="sign up" class="button">
     </form>
 
-    <form action="/teacher/createLesson" method="get">
-        <input type="submit" value="create lesson" class="button">
-    </form>
-
-    <form action="/teacher/list" method="get">
-        <input type="submit" value="list students" class="button">
-    </form>
-    <form action="/teacher/editLesson" method="get">
-        <input type="submit" value="edit lesson" class="button">
-    </form>
-    <form action="/teacher/fileUpload" method="get">
-        <input type="submit" value="file upload" class="button">
-    </form>
 </nav>
 <footer>
     CopyRight 2021 JiRan

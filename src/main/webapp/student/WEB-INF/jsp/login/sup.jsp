@@ -43,7 +43,7 @@
     </style>
 </head>
 <div class="box1" align="center">
-    <h1 class="text1">教师注册</h1>
+    <h1 class="text1">学生注册</h1>
 
     <form action="sup" method="post">
         <input type="text" name="user_name" placeholder="用户名">

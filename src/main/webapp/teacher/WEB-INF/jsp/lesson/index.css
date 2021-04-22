@@ -1,0 +1,16 @@
+nav {
+    line-height:30px;
+    background-color: #CCFFFF;
+    height:700px;
+    width:200px;
+    float:left;
+
+}
+
+footer {
+    background-color:#6699CC;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}

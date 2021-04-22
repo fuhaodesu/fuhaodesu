@@ -1,8 +1,8 @@
 package com.service;
 
-import com.model.ResultModel;
+import com.model.UserResultModel;
 
 public interface IUserService {
-    public ResultModel signIn(String userName,String userPwd);
-    public ResultModel signUp(String userName,String userPwd,String userPwd2);
+    public UserResultModel signIn(String userName, String userPwd);
+    public UserResultModel signUp(String userName, String userPwd, String userPwd2);
 }
