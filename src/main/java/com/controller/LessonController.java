@@ -9,13 +9,16 @@ import com.service.ILessonService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 public class LessonController {
+
 
     @RequestMapping(value = "teacher/createLesson",method =RequestMethod.GET)
     public ModelAndView createLesson(){
@@ -59,6 +62,7 @@ public class LessonController {
         mv.addObject("tea2",lesson.getTeacherName2());
         mv.addObject("tea3",lesson.getTeacherName3());
         mv.addObject("tea4",lesson.getTeacherName4());
+        mv.addObject("id",lesson.getId());
         return mv;
     }
     @RequestMapping(value ="teacher/editLesson",method = RequestMethod.POST)
@@ -67,8 +71,11 @@ public class LessonController {
         mv.setViewName("lesson/result");
 
         LessonInfo lessonInfo=new LessonInfo();
-        System.out.println(request.getParameter("building"));
-        System.out.println(Integer.parseInt(request.getParameter("room")));
+
+
+        System.out.println(request.getParameter("id"));
+
+
         lessonInfo.setBuilding(request.getParameter("building"));
         lessonInfo.setRoom(Integer.parseInt(request.getParameter("room")));
         lessonInfo.setStartWeek(Integer.parseInt(request.getParameter("startWeek")));
@@ -76,7 +83,7 @@ public class LessonController {
         lessonInfo.setDay(Integer.parseInt(request.getParameter("day")));
         lessonInfo.setStartNum(Integer.parseInt(request.getParameter("startNum")));
         lessonInfo.setEndNum(Integer.parseInt(request.getParameter("endNum")));
-//        lessonInfo.setId(Integer.parseInt(request.getParameter("id")));
+        lessonInfo.setId(Integer.parseInt(request.getParameter("id")));
 
         System.out.println(lessonInfo);
         lessonService.editLesson(lessonInfo);
@@ -84,5 +91,15 @@ public class LessonController {
         return mv;
     }
 
-
+    @RequestMapping(value = "teacher/listLesson")
+    public ModelAndView listLesson(){
+        ModelAndView mv=new ModelAndView();
+        mv.setViewName("lesson/listLesson");
+        return mv;
+    }
+    @RequestMapping(value = "teacher/listLessons")
+    @ResponseBody
+    public List<Lesson> listLessons(){
+        return lessonService.listLesson();
+     }
 }

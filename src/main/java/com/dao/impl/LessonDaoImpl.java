@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import javax.annotation.Resource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 
 @Repository
@@ -60,6 +61,29 @@ public class LessonDaoImpl implements ILessonDao {
     public Integer addLessonInfo(LessonInfo lessonInfo) {
         return jdbcTemplate.update("insert into lesson_info(id,building,room,week,weekday,num) values(?,?,?,?,?,?)",
                 lessonInfo.getId(),lessonInfo.getBuilding(),lessonInfo.getRoom(),lessonInfo.getWeek(),lessonInfo.getDay(),lessonInfo.getNum());
+    }
+
+    @Override
+    public List<Lesson> listLesson() {
+
+        return jdbcTemplate.query("select id,lessonName,teacherName1,teacherName2,teacherName3,teacherName4",
+                new LessonRowMapper());
+    }
+
+    @Override
+    public List<LessonInfo> queryLessonTable() {
+        return null;
+    }
+
+    @Override
+    public List<Lesson> queryForAllLessons() {
+        return jdbcTemplate.query("select id,lessonName,teacherName1,teacherName2,teacherName3,teacherName4 from lessons",
+                new LessonRowMapper());
+    }
+
+    @Override
+    public Integer delLesson(Integer id) {
+        return jdbcTemplate.update("delete from lessons where id=?",id);
     }
 
     public static class LessonRowMapper implements RowMapper<Lesson> {

@@ -1,15 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
-  Date: 2021/2/18
-  Time: 11:28
+  Date: 2021/3/1
+  Time: 14:23
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>index</title>
-
+    <title>choose lesson</title>
     <style>
         header {
             background-color: #6699CC;
@@ -71,9 +70,13 @@
         }
     </style>
 </head>
+
+
+
 <body>
+
 <header>
-    <h1>index for student</h1>
+    <h1>choose lesson</h1>
 </header>
 <nav>
     <form action="/student/sin" method="get">
@@ -84,7 +87,7 @@
     </form>
 
     <form action="/student/chooseLesson" method="get">
-        <input type="submit" value="choose lesson" class="button">
+        <input type="submit" value="choose lesson" class="buttonHover">
     </form>
     <form action="/student/queryLesson" method="get">
         <input type="submit" value="query lesson" class="button">
@@ -93,6 +96,11 @@
 <footer>
     CopyRight 2021 JiRan
 </footer>
+
+
+
+
+
 
 
 
